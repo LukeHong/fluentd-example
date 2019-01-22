@@ -15,5 +15,5 @@ RUN apk add --no-cache --update --virtual .build-deps \
 
 USER fluent
 
-RUN mkdir -p /fluentd/nginx/ && mkdir /fluentd/log/buffer
-COPY fluentd-gcs.json /fluentd/etc
+RUN mkdir /fluentd/log/buffer
+COPY [YOUR_KEYFILE_NAME].json /fluentd/etc
